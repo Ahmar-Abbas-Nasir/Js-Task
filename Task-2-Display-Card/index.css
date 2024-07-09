@@ -1,0 +1,24 @@
+*{
+  box-sizing: border-box;
+}
+#questionContainer{
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  justify-content: center;
+  align-items: center;
+}
+/* #questionContainer > div { */
+.div{
+  /* border: 1px solid red; */
+  margin: 2px;
+  height: 200px;
+  width: 32vw;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}

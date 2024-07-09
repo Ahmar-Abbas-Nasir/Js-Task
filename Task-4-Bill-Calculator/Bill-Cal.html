@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-3 (Bill Calculator)</title>
+  <link rel="stylesheet" href="./Bill-Cal.css">
+</head>
+<body>
+  <h1 id="mainHeading">Task-3 (Bill Calculator)</h1>
+  <div id="container">
+    <label for="bill">How much was the bill: </label>
+    <input type="text"name="bill"class="inputField" placeholder="Enter bill...">
+    <br>
+    <label for="yourExp">How did you like the service? </label>
+    <select name="yourExp" id="yourExp" class="dropDown">
+      <option value="">Rate your Experience</option>
+      <option value="5">It was ok (5%)</option>
+      <option value="10">It was ok (10%)</option>
+      <option value="15">It was ok (15%)</option>
+    </select>
+    <br>
+    <label for="frndExp">How did your friend like the service? </label>
+    <select name="frndExp" id="frndExp"class="dropDown">
+      <option value="">Rate your friend's experience</option>
+      <option value="5">It was ok (5%)</option>
+      <option value="10">It was ok (10%)</option>
+      <option value="15">It was ok (15%)</option>
+    </select> <br>
+    <h3 id="msg" class="none">Total bill</h3>
+    <button class="btn" onclick="cal()">Calculate</button>
+    <button class="btn" onclick="reset()">Reset</button> <br>
+  </div>
+  <script src="./Bill-Cal.js"></script>
+</body>
+</html>

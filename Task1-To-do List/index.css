@@ -1,0 +1,135 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* ---heading */
+.mainHeading{
+  font-size: 2rem;
+}
+/* ---navbar */
+.container{
+  width: 80vw;
+  margin: auto;
+  
+}
+.navBar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(224, 152, 63, 0.84);
+}
+img{
+  height: 90px;
+  width: 90;
+}
+/* ---section1 */
+.section1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  background-color: rgb(201, 112, 48);
+}
+.section1Para{
+  font-size: 1.5rem;
+}
+.section1Para, #dropDown, .inputItems{
+  margin: 0 1em;
+}
+/* ---section2 */
+#section2{
+  /* height: 75vh; */
+  background-color: #916a4b;
+}
+#lsitItemBtn{
+  display: inline-block;
+  border: 2px solid black ;
+  border-radius: 15px;
+  margin: 1em;
+  background-color: white;
+}
+.apendInnerBtn{
+  color: red;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  
+}
+/* ---section3 */
+.section3{
+  background-color: #77471f;
+  padding: 0.7em;
+}
+.footer{
+background-color: rgba(103, 163, 165, 0.863);
+padding: 0.5em;
+}
+/* ---utility classes */
+.inputField{
+  padding: 0.5em;
+  border-radius: 15px;
+  font-size: 16px;
+  border: none;
+}
+.center{
+  text-align: center;
+}
+.btn{
+    cursor: pointer;
+    margin: 0 1em;
+    padding: 0.7em;
+}
+
+
+/* ---media query */
+
+@media (min-width: 983px){
+  /* ---section2 */
+#section2{
+  height: 75vh;
+}
+}
+
+@media (max-width: 983px){
+  /* ---navbar */
+  img{
+    height: 70px;
+    width: 70px;
+  }
+
+
+/* ---section1 */
+  .section1Para{
+    font-size: 1rem;
+  }
+  .section1Para, #dropDown, .inputItems, .btn{
+    margin: 0 0.5em;
+  }
+  /* ---section2 */
+  #section2{
+    height: 50vh;
+  }
+  .footerHeading{
+    font-size: 1em;
+  }
+  /* ---utility Class */
+  .inputField{
+    font-size: 12px;
+  }
+}
+@media (max-width: 660px){
+  
+  .heading{
+    font-size: 1.4em;
+  }
+  .section1{
+    flex-direction: column;
+  }
+  .section1Para, #dropDown, .inputItems, .btn{
+    margin: 0.5em 0;
+  }
+  .inputField{
+    padding: 0.4em;
+  }
+}

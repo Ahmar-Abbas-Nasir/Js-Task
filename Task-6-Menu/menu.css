@@ -1,0 +1,57 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  box-sizing: border-box;
+}
+/*nav....*/
+.nav{
+  width: 40vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#name{
+  color: rgb(203 174 10);
+  margin: 10px;
+
+}
+#menu{
+  border-top: 2px solid black;
+  border-bottom: 3px solid black ;
+  margin: 10px;
+}
+img{
+  width: 100px;
+  height: 100px;
+}
+/* inside menu */
+.container{
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.containerItem{
+  width: 43vw;
+  display: flex;
+  margin: 10px;
+  background-color: rgb(255 249 218);
+
+}
+.containerItem > div{
+  margin: 5px;
+}
+.itemDetail > p, h3{
+  padding: 7px;
+}
+.opacity{
+  opacity: 0.5;
+}
+/* utility classes */
+.center{
+  text-align: center;
+}

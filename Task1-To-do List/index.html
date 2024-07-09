@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-do List in process</title>
+</head>
+<link rel="stylesheet" href="./index.css">
+<body>
+  
+  <div class="container">
+    <h1 class="mainHeading center">
+      Task 1
+    </h1>
+    <nav class="navBar">
+      <img src="https://icons.iconarchive.com/icons/microsoft/fluentui-emoji-flat/128/Palm-Tree-Flat-icon.png" alt="Tree">
+    <h1 class="heading">
+      FAR AWAY
+    </h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Suitcase_Flat_Icon_Vector.svg/512px-Suitcase_Flat_Icon_Vector.svg.png?20180301083157" alt="Bag">
+    </nav>
+    <div class="section1">
+      <p class="section1Para">What do you need for your trip</p>
+      <select name="dropDown"class="inputField" id="dropDown"><option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      <input type="text"class="inputItems inputField" placeholder="Enter Items..."required>
+      <!-- <button class="btn btn1 inputField">Add</button> -->
+      <button class="btn btn1 inputField">Add</button>
+    </div>
+    <div class=" packingList"id="section2">
+
+    </div>
+    <div class="section3 center">
+      <select name="dropDown"class="inputField" id="dropDown2">
+        <option value="SBD">Sort By Direction</option>
+        <option value="a-z" id="a-z" onclick="sortOrder()">A-Z</option>
+        <option value="z-a" id="z-a">Z-A</option>
+      </select>
+      <button class="clearBtn btn btn2 inputField">Clear List</button>
+    </div>
+    <footer class="footer">
+      <h2 class="footerHeading center">Start adding some items to your packing list</h2>
+    </footer>
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>
