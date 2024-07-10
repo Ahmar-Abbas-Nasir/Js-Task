@@ -63,7 +63,10 @@ pizzaData.forEach((data)=>{
   
   container.appendChild(newDiv);
 });
+  let footer = document.createElement("div");
+  footer.className="footerDiv";
   const now = new Date();
+  console.log(now);
   const hours = now.getHours();
   const minutes = now.getMinutes();
   const seconds = now.getSeconds();
@@ -75,10 +78,14 @@ pizzaData.forEach((data)=>{
   const currentMinute = now.getMinutes();
   if(currentHour>=11 && currentMinute>=0) {
     console.log("open");
-    timing.textContent="We're happy to welcome you between 11:00am and 12:00 am";
+    timing.textContent="We're happy to welcome you between 11:00am and 12:00am";
   }else{
     console.log("close");
-    timing.textContent="We're happy to welcome you between 11:00am and 12:00 am";
+    timing.textContent="We're happy to welcome you between 11:00am and 12:00am.";
   }
-  container.appendChild(timing);
-
+  let button = document.createElement("button");
+  button.classList.add("btn");
+  button.innerText="Order";
+  footer.appendChild(timing); 
+  footer.appendChild(button);
+  container.after(footer);
