@@ -5,20 +5,36 @@ let next = document.getElementById("next");
 let previous = document.getElementById("prev");
 let reset = document.getElementById("reset");
 firstStep.classList.add("purple");
+previous.classList.add("disabled")
 let count=2;
 next.addEventListener("click", function(){
+ previous.classList.remove("disabled");
+ if(count==1){
+  count=2;
+ }
  purpleColor();
+
  count++;
  if (count > 3) {
+  next.classList.add("disabled");
   count = 3;
 }
+console.log("next", count);
 });
 previous.addEventListener("click", function(){
-  count--;
-  if(count<1){
-    count=1;
+  console.log("prev",count);
+  next.classList.remove("disabled");
+  if(count>1){
+    count--;
+    console.log("if", count);
+    if(count<2){
+      previous.classList.add("disabled");
+      count=1;
+      
+    }
+   purpleColor();
   }
- purpleColor();
+  
 });
 reset.addEventListener("click", function(){
   count=2;
@@ -26,6 +42,8 @@ reset.addEventListener("click", function(){
   currentPurple.classList.remove("purple");
   firstStep.classList.add("purple");
   newText.textContent="Step 1: Learn HTML";
+  next.classList.remove("disabled");
+  previous.classList.add("disabled");
 })
 function purpleColor(){
   let currentPurple = nmbr.querySelector(".purple");
@@ -33,11 +51,12 @@ function purpleColor(){
   let nextPurple = document.getElementById(`${count}`);
   nextPurple.classList.add("purple");
 
+
   if(nextPurple.id=="1"){
    newText.textContent="Step 1: Learn HTML";
   } else if(nextPurple.id=="2"){
    newText.textContent="Step 2: Learn CSS";
   }else if(nextPurple.id=="3"){
-    newText.textContent="Step 2: Learn JAVASCRIPT";
+    newText.textContent="Step 3: Learn JAVASCRIPT";
    }
 }

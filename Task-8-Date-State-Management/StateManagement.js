@@ -34,8 +34,6 @@ function countPlus(){
   }else{
     trackCount++;
   }
-    
-    // trackCount++;
   
   count.textContent=`Count ${trackCount}`;
 
