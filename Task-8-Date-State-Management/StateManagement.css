@@ -1,37 +1,38 @@
-#container{
+#container {
   width: 70vw;
   margin: auto;
 }
-.minus{
+.minus {
   padding: 8px 20px;
   border-radius: 30px;
   font-size: 30px;
 }
-.plus{
+.plus {
   padding: 13px 20px;
   border-radius: 30px;
   font-size: 24px;
 }
-.date{
+.date {
   height: 50px;
- }
-  /* utility classes */
-.flex{
+}
+/* utility classes */
+.flex {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.textCenter{
+.textCenter {
   text-align: center;
   justify-content: center;
 }
-#container > div{
+#container > div {
   margin: 15px;
 }
-div > button,h1{
+div > button,
+h1 {
   padding: 0 20px;
 }
-.backPurple{
-  background-color: rgb(99,14,179);
+.backPurple {
+  background-color: rgb(99, 14, 179);
   color: white;
 }
