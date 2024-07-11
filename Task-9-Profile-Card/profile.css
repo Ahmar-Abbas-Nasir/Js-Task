@@ -16,10 +16,10 @@ body{
 .cards{   
   border: 8px solid black;
   margin: 10px;
-  width: 400px;
+  width: 500px;
 }
 .image{
-  width: 400px;
+  width: 500px;
   height: 250px;
 }
 .name{
@@ -30,11 +30,14 @@ body{
 }
 .skillDiv{
   margin: 50px 0;
+  display: flex;
+  flex-direction: column;
 }
 .skill, .intro{
   font-size: 20px;
 }
 .skill{
+  margin: 10px;
   padding: 10px;
   border-radius: 15px;
 }
@@ -62,7 +65,8 @@ body{
 }
 .green {
   background-color: rgb(59,128,4);
+  color: white;
 }
-.golish {
+.goldish {
   background-color: rgb(239,164,28);
 }

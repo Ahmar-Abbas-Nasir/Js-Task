@@ -76,7 +76,7 @@ const profileData = [
       },
       {
         name: "SVG",
-        color: "golish",
+        color: "goldish",
         level: "Intermediate",
       },
       {
@@ -105,7 +105,7 @@ const profileData = [
       },
       {
         name: "TypeScript",
-        color: "blue",
+        color: "goldish",
         level: "Intermediate",
       },
       {
@@ -139,7 +139,7 @@ const profileData = [
       },
       {
         name: "AWS",
-        color: "orange",
+        color: "goldish",
         level: "Advanced",
       },
     ],
@@ -159,9 +159,21 @@ profileData.forEach((data, index) => {
     <p class="intro">${data.intro}</p>
     </detail>
     <div class="skillDiv">
-    
+    <span class = "skill"> </span>
     </div>
   `;
+
+   // Select the skillDiv where skills will be appended
+   let skillDiv = newDiv.querySelector(".skillDiv");
+
+   // Iterate through skills array of each profile and create spans for each skill
+   data.skills.forEach((skill) => {
+     let skillSpan = document.createElement("span");
+     skillSpan.className = `skill ${skill.color} center`;
+     skillSpan.textContent = `${skill.name} (${skill.level})`;
+     skillDiv.appendChild(skillSpan);
+   });
+ 
   // <span class="skill ${data.skills[index].color}">${data.skills[index].name}</span>
   container.appendChild(newDiv);
 });
