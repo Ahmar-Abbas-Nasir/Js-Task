@@ -7,6 +7,8 @@ let count = document.querySelector(".count");
 let trackCount = parseInt(count.textContent[6]);
 
 let dateText = document.querySelector(".datePara");
+// const URL = "https://api.sampleapis.com/beers/ale";
+const URL = "https://api.adviceslip.com/advice";
 
 function displaydate() {
   const now = new Date();
@@ -17,6 +19,8 @@ function displaydate() {
     day: "numeric",
   };
   dateText.textContent = now.toLocaleDateString("en-US", options);
+fetchData();
+
 }
 
 displaydate();
@@ -52,6 +56,8 @@ function countPlus() {
     day: "numeric",
   };
   dateText.textContent = nextDay.toLocaleDateString("en-US", options);
+  fetchData();
+
 }
 
 function countMinus() {
@@ -73,6 +79,8 @@ function countMinus() {
     day: "numeric",
   };
   dateText.textContent = prevDay.toLocaleDateString("en-US", options);
+  fetchData();
+
 }
 
 function reset() {
@@ -83,4 +91,16 @@ function reset() {
   trackCount = parseInt(count.textContent[6]);
 
   displaydate();
+  fetchData();
+
+}
+
+async function fetchData() {
+  // debugger;
+  let response = await fetch(URL);
+  debugger;
+  let request =  await response.json();
+ 
+  console.log(request);
+  document.getElementById("advice").textContent = request.slip.advice;
 }

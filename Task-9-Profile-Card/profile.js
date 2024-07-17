@@ -163,10 +163,8 @@ profileData.forEach((data, index) => {
     </div>
   `;
 
-   // Select the skillDiv where skills will be appended
    let skillDiv = newDiv.querySelector(".skillDiv");
 
-   // Iterate through skills array of each profile and create spans for each skill
    data.skills.forEach((skill) => {
      let skillSpan = document.createElement("span");
      skillSpan.className = `skill ${skill.color} center`;
@@ -174,6 +172,5 @@ profileData.forEach((data, index) => {
      skillDiv.appendChild(skillSpan);
    });
  
-  // <span class="skill ${data.skills[index].color}">${data.skills[index].name}</span>
   container.appendChild(newDiv);
 });

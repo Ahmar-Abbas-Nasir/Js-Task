@@ -24,6 +24,7 @@
 .textCenter {
   text-align: center;
   justify-content: center;
+  text-align: center;
 }
 #container > div {
   margin: 15px;
